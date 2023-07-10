@@ -6,6 +6,7 @@ TagManager:
   tags:
   - -oyuncu
   - Alien
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
