@@ -43,6 +43,7 @@ public class Player : MonoBehaviour
         }
 
         /*
+
 #if UNITY_EDITOR
         if (Input.GetKey(KeyCode.A) && transform.position.x > -width)
         {
@@ -57,14 +58,18 @@ public class Player : MonoBehaviour
             StartCoroutine(Shoot());
         }
 #endif
+
         */
     }
+
+
+
 
     private IEnumerator Shoot()
     {
         isShooting = true;
 
-        // Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        //Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         GameObject obj = objectPool.GetPooledObject();
         obj.transform.position = gameObject.transform.position;
         yield return new WaitForSeconds(coolDown);
